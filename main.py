@@ -63,7 +63,7 @@ def ParseImage(arr1, arr2):
         for j in range(0,3,+1):
             x=arr1[i][j]
             z = 19
-            url1= "https://tile.googleapis.com/v1/2dtiles/"+str(z)+"/"+str(x)+"/"+str(y)+"?session="+session_data_info+"&key=AIzaSyBsns8WDhLDdo-SyRaFSEeOTirv-sbMIfc"
+            url1= "https://tile.googleapis.com/v1/2dtiles/"+str(z)+"/"+str(x)+"/"+str(y)+"?session="+session_data_info+"&key="
             response1=requests.get(url1)
             output_file=f'parsed_images/{num}.png'
             num=num+1
@@ -137,7 +137,7 @@ n = 2 ** z
 startX = int((lng + 180.0) / 360.0 * n)
 lat_rad = math.radians(lat)
 startY = int((1.0 - math.log(math.tan(lat_rad) + 1.0 / math.cos(lat_rad)) / math.pi) / 2.0 * n)
-url = "https://tile.googleapis.com/v1/createSession?key=AIzaSyBsns8WDhLDdo-SyRaFSEeOTirv-sbMIfc"
+url = "https://tile.googleapis.com/v1/createSession?key="
 data = {
     "mapType": "satellite",
     "language": "en-US",
